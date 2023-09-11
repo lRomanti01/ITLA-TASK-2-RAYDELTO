@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora WEB</title>
+  </head>
+  <body>
+    <div class="calculator" id="calculator">
+      <div class="history-btn">
+        <img
+          src="assets/history-clock.png"
+          alt="history-clock"
+          onclick="showHistory()"
+        />
+      </div>
+      <div class="result" id="result">0</div>
+      <div class="fila">
+        <button onclick="calculateDivisionByOne()">¹/x</button>
+        <button onclick="calculateSquare()">x²</button>
+        <button onclick="calculateRoot()">√</button>
+        <button onclick="eliminateNumbers()">←</button>
+      </div>
+      <div class="fila">
+        <button onclick="appendToResult('7')">7</button>
+        <button onclick="appendToResult('8')">8</button>
+        <button onclick="appendToResult('9')">9</button>
+        <button onclick="appendToResult('/')">/</button>
+      </div>
+      <div class="fila">
+        <button onclick="appendToResult('4')">4</button>
+        <button onclick="appendToResult('5')">5</button>
+        <button onclick="appendToResult('6')">6</button>
+        <button onclick="appendToResult('*')">*</button>
+      </div>
+      <div class="fila">
+        <button onclick="appendToResult('1')">1</button>
+        <button onclick="appendToResult('2')">2</button>
+        <button onclick="appendToResult('3')">3</button>
+        <button onclick="appendToResult('-')">-</button>
+      </div>
+      <div class="fila">
+        <button onclick="calculateResult()">=</button>
+        <button onclick="appendToResult('0')">0</button>
+        <button onclick="appendToResult('.')">.</button>
+        <button onclick="appendToResult('+')">+</button>
+      </div>
+      <button onclick="clearResult()" class="clear">C</button>
+      <div class="history-container" id="history-container">
+        <div class="background" id="background" onclick="showHistory()"></div>
+        <div class="history-text" id="history-text"></div>
+        <div class="trashcan-container">
+          <img src="assets/trash-can.png" alt="trash-can" onclick="removeHistory()"/>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
